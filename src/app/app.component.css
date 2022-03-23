@@ -1,0 +1,17 @@
+.formulariocompleto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#tamanhoformulario {
+    width: 750px;  
+}
+.itensformulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#botao {
+    width: 100%;
+}

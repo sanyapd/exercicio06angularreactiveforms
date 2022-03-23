@@ -1,0 +1,145 @@
+<div class="formulariocompleto">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastre-se com a gente!</mat-card-title>
+  </mat-card-header>
+    <mat-card-content>
+      <form action="#"
+      id="tamanhoformulario"
+      (ngSubmit)="submit()"
+      [formGroup]="grupoForm">
+      <div class="itensformulario">
+        <mat-form-field appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input type="text" matInput placeholder="Coloque aqui seu nome!"
+          formControlName="name">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['name'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['name'].getError('minlength')">
+              Esse campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Sobrenome</mat-label>
+          <input type="text" matInput placeholder="Coloque aqui seu sobrenome!"
+          formControlName="sobrenome">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['sobrenome'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['sobrenome'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appetarance="fill">
+          <mat-label>CPF</mat-label>
+          <input type="string" matInput placeholder="Digite aqui o seu CPF!"
+          formControlName="cpf">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['cpf'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['cpf'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+        </div>
+        <div class="itensformulario">
+            <mat-form-field appearance="fill">
+              <mat-label>Telefone</mat-label>
+              <input type="tel" matInput placeholder="Digite aqui o seu telefone"
+              formControlName="telefone">
+              <mat-error>
+                <span *ngIf="grupoForm.controls['telefone'].getError('required')">
+                  Você não preencheu o dado solicitado corretamente!
+                </span>
+                <span *ngIf="grupoForm.controls['telefone'].getError('minlength')">
+                  Esse campo é obrigatório!    
+                </span>
+              </mat-error>
+            </mat-form-field>     
+        <mat-form-field appearance="fill">
+          <mat-label>Endereço</mat-label>
+          <input type="text" matInput placeholder="Digite aqui o seu endereço."
+          formControlName="endereco">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['endereco'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['endereco'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Complemento</mat-label>
+          <input type="texto" matInput placeholder="Digite aqui o complemento do seu endereço."
+          formControlName="complemento">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['complemento'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['complemento'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="itensformulario">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome de usuário</mat-label>
+        <input type="text" matInput placeholder="Digite aqui o seu nome de usuário!"
+        formControlName="usuario">
+        <mat-error>
+          <span *ngIf="grupoForm.controls['usuario'].getError('required')">
+            Você não preencheu o dado solicitado corretamente!
+          </span>
+          <span *ngIf="grupoForm.controls['usuario'].getError('minlength')">
+            Esse campo é obrigatório!    
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+          <mat-label>Digite sua Senha</mat-label>
+          <input type="senha" matInput placeholder="Escolha a sua senha!"
+          formControlName="senha">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['senha'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['senha'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Confirme sua senha</mat-label>
+          <input type="senhaconfirmada" matInput placeholder="Confirme a senha digitada."
+          formControlName="senhaconfirmada">
+          <mat-error>
+            <span *ngIf="grupoForm.controls['senhaconfirmada'].getError('required')">
+              Você não preencheu o dado solicitado corretamente!
+            </span>
+            <span *ngIf="grupoForm.controls['senhaconfirmada'].getError('minlength')">
+              Esse campo é obrigatório!    
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="itensformulario">
+        <button mat-raised-button 
+        type="submit"
+         color="accent"
+         id="botao"
+         [disabled]="grupoForm.invalid"
+         (click)="submit()">Cadastrar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+</div>
